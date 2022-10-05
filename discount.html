@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This is discount page</title> 
+    </head>
+ 
+<body>
+
+<h3> Jyoshtna computes discounts</h3>
+
+<form>
+    <div class="form-group">
+    <label for="basevalue">Enter base amount </label>
+    <input type ="number" id="basevalue" name="basevalue" value=20> 
+</div><br>
+<div class="form-group">
+    <label for="discountvalue">Enter the discount percentage </label>
+    <input type ="number" id="discountvalue" name="discountvalue" value=10 > 
+</div><br>
+<div>
+    <input type="button" class="btn btn-danger" onclick="discount()" value="Apply discount">
+</div>
+</form>
+
+<p id="result">The changes are  seen here</p>
+
+<script> 
+
+function discount (){
+    let basevalue=document.getElementById("basevalue").value;
+    let val=document.getElementById("discountvalue").value;
+    let result="";
+    for(let i=1;i<6;i++)
+    {
+        let discount=(basevalue*i)-((basevalue*i)*val/100);
+        result=result+" "+discount;
+    }
+    document.getElementById("result").innerHTML="Discounted amounts for base "+ basevalue +" are "+result;
+}
+</script>
+</body>
+</html>
