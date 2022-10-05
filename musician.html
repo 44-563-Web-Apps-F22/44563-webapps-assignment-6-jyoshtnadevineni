@@ -40,6 +40,28 @@ function checkGuess(){
     }
 }
 </script>
-
+<div class="container">
+    <img src="Damselflies.jpg"class="Damselflies.jpg" onclick="swapimage()" id="image" width="100px" height="100px"alt="insect">
+     <p id="image">the pictures will change</p>
+</div>
+<script>
+    var useimage=1
+    function swapimage(){
+        switch(useimage){
+            case 1:
+                document.getElementById("image").src="Damselflies.jpg";
+                useimage=2;
+                break;
+            case 2:
+                document.getElementById("image").src="Ear wig.jpg";
+                useimage=3;
+                break;
+            case 3:
+                document.getElementById("image").src="Viceroy butterfly.jpg";
+                useimage=1;
+                break;       
+        }
+    }
+</script>
 </body>
 </html> 
